@@ -1,0 +1,26 @@
+#option1-loops {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.loop-container {
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#option1-results, #option2-results, #option3-results {
+    margin-top: 15px;
+}
+
+#option1-loops, #option2-longest-loop-barchart, #option2-found-counts-barchart, #option3-histogram {
+    margin-top: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+}

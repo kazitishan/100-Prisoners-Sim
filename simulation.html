@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulations</title>
+    <link rel="icon" href="media/icon.png" type="image/x-icon">
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Nunito Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="simulation.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="media/icon.png" alt="Website Icon" width="50" height="auto">
+            <h1>100 Prisoners Problem Simulation</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="simulation.html">Simulations</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Simulation Choices Section -->
+        <section id="simulation-choices">
+            <form>
+                <label for="options">Choose a Simulation to Run:</label>
+                <select id="options" name="simulation-choices">
+                    <option value="1">Run One Simulation</option>
+                    <option value="2">Run Many Simulations</option>
+                    <option value="3">Generate a Sampling Distribution</option>
+                </select>
+            </form>
+        </section>
+
+        <!-- Content for Option 1 -->
+        <section id="content1" class="content-section" style="display: block;">
+            <h2>Run One Simulation</h2>
+            <p>This simulation runs the solution to the problem and returns data from the simulation.</p>
+
+            <button type="button" id="option1-button">Run</button>
+
+            <div id="option1-results">
+                <p id="option1-result"></p>
+                <p id="option1-longest-loop"></p>
+                <p id="option1-found-count"></p>
+                <div id="option1-loops"></div>
+            </div>
+        </section>
+
+        <!-- Content for Option 2 -->
+        <section id="content2" class="content-section" style="display: none;">
+            <h2>Run Many Simulations</h2>
+            <p>This simulation runs X simulations and returns the number of simulations in which the prisoners won.</p>
+            <div>
+                <label for="option2-input">Enter number of simulations:</label>
+                <input type="number" id="option2-input" min="1" placeholder="Enter a number">
+
+                <button type="button" id="option2-button">Run</button>
+            </div>
+
+            <div id="option2-results">
+                <p id="option2-result"></p>
+                <div id="option2-colorcode"></div>
+                <div id="option2-longest-loop-barchart"></div>
+                <div id="option2-found-counts-barchart"></div>
+            </div>
+        </section>
+
+        <!-- Content for Option 3 -->
+        <section id="content3" class="content-section" style="display: none;">
+            <h2>Generate a Sampling Distribution</h2>
+            <p>This simulation returns a sampling graph of X samples of Y simulations</p>
+            <div>
+                <label for="option3-input-1">Enter number of Samples:</label>
+                <input type="number" id="option3-input-1" min="1" placeholder="Enter a number">
+
+                <label for="option3-input-2">Enter number of Simulations per Sample:</label>
+                <input type="number" id="option3-input-2" min="1" placeholder="Enter a number">
+
+                <button type="button" id="option3-button">Run</button>
+            </div>
+
+            <div id="option3-results">
+                <p id="mean-wins"></p>
+                <p id="min-wins"></p>
+                <p id="max-wins"></p>
+
+                <div id="option3-histogram"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 100 Prisoners Problem Simulation</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
